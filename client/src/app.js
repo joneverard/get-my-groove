@@ -1,10 +1,11 @@
 import React from "react";
-import { Counter } from "./features/counter/Counter";
+
+import TrackCard from "components/track-card/track-card";
 
 function App() {
   return (
     <div className="App">
-      <Counter />
+      <TrackCard />
     </div>
   );
 }
