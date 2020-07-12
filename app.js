@@ -57,10 +57,10 @@ app.get("/", function (req, res) {
 
 require("./server/lib/auth/auth-rest.js")(app);
 require("./server/lib/playlists/playlist-rest.js")(app, spotifyApi);
+require("./server/lib/user/user-rest.js")(app);
 
 app.get("/account", ensureAuthenticated, function (req, res) {
   console.log("ACCOUNT", req.session);
-  //
   res.render("account.html", { user: req.user });
 });
 
